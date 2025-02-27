@@ -42,7 +42,7 @@ const monthSelect = (month: React.ChangeEvent<HTMLSelectElement>) => {
   }
   if (selectMonth.value !== "" && selectYear.value !== "") {
     const lastDay = new Date(Number(selectYear.value), Number(selectMonth.value), 0).getDate();
-    for (let i = 0; i < lastDay; i++) {
+    for (let i = 1; i < lastDay+1; i++) {
       let optionTag = document.createElement("option");
       optionTag.value = i.toString();
       optionTag.text = i.toString();
